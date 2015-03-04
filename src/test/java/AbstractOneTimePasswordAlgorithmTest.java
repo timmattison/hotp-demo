@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
  * Created by timmattison on 2/24/15.
  */
 public abstract class AbstractOneTimePasswordAlgorithmTest {
-    public abstract void innerTest(int value, String expected) throws NoSuchAlgorithmException, InvalidKeyException;
+    public abstract void innerTestHotpValue(int count, String expected) throws NoSuchAlgorithmException, InvalidKeyException;
 
     private static final String secret = "12345678901234567890";
     private static final byte[] secretBytes = secret.getBytes();
@@ -19,73 +19,73 @@ public abstract class AbstractOneTimePasswordAlgorithmTest {
     public static final int CODE_DIGITS = 6;
 
     @Test
-    public void test0() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 0;
+    public void appendixDTable2Test0() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 0;
         String expected = "755224";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test1() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 1;
+    public void appendixDTable2Test1() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 1;
         String expected = "287082";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test2() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 2;
+    public void appendixDTable2Test2() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 2;
         String expected = "359152";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test3() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 3;
+    public void appendixDTable2Test3() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 3;
         String expected = "969429";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test4() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 4;
+    public void appendixDTable2Test4() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 4;
         String expected = "338314";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test5() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 5;
+    public void appendixDTable2Test5() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 5;
         String expected = "254676";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test6() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 6;
+    public void appendixDTable2Test6() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 6;
         String expected = "287922";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test7() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 7;
+    public void appendixDTable2Test7() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 7;
         String expected = "162583";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test8() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 8;
+    public void appendixDTable2Test8() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 8;
         String expected = "399871";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     @Test
-    public void test9() throws InvalidKeyException, NoSuchAlgorithmException {
-        int value = 9;
+    public void appendixDTable2Test9() throws InvalidKeyException, NoSuchAlgorithmException {
+        int count = 9;
         String expected = "520489";
-        innerTest(value, expected);
+        innerTestHotpValue(count, expected);
     }
 
     protected int getTruncationValue() {

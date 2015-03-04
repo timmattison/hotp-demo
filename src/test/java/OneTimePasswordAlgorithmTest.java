@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.is;
  */
 public class OneTimePasswordAlgorithmTest extends AbstractOneTimePasswordAlgorithmTest {
     @Override
-    public void innerTest(int value, String expected) throws NoSuchAlgorithmException, InvalidKeyException {
-        Assert.assertThat(OneTimePasswordAlgorithm.generateOTP(getSecretBytes(), value, getCodeDigits(), false, getTruncationValue()), is(expected));
+    public void innerTestHotpValue(int count, String expected) throws NoSuchAlgorithmException, InvalidKeyException {
+        Assert.assertThat(OneTimePasswordAlgorithm.generateOTP(getSecretBytes(), count, getCodeDigits(), false, getTruncationValue()), is(expected));
     }
 }

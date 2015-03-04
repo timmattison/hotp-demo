@@ -19,8 +19,8 @@ public class NonStaticOneTimePasswordAlgorithmTest extends AbstractOneTimePasswo
     }
 
     @Override
-    public void innerTest(int value, String expected) throws NoSuchAlgorithmException, InvalidKeyException {
-        Assert.assertThat(nonStaticOneTimePasswordAlgorithm.generateOTP(getSecretBytes(), value, getCodeDigits(), false, getTruncationValue()), is(expected));
+    public void innerTestHotpValue(int count, String expected) throws NoSuchAlgorithmException, InvalidKeyException {
+        Assert.assertThat(nonStaticOneTimePasswordAlgorithm.generateOTP(getSecretBytes(), count, getCodeDigits(), false, getTruncationValue()), is(expected));
     }
 
 }

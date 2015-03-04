@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 public interface OTPAlgorithm {
     public int calcChecksum(long num, int digits);
 
-    public byte[] hmac_sha1(byte[] keyBytes, byte[] text) throws NoSuchAlgorithmException, InvalidKeyException;
+    public byte[] hmacSha1(byte[] keyBytes, byte[] text) throws NoSuchAlgorithmException, InvalidKeyException;
 
     public String generateOTP(byte[] secret, long movingFactor, int codeDigits, boolean addChecksum, int truncationOffset) throws NoSuchAlgorithmException, InvalidKeyException;
 }

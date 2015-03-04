@@ -1,7 +1,5 @@
 package com.timmattison.hotp;
 
-import com.timmattison.hotp.OTPAlgorithm;
-
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
@@ -67,7 +65,7 @@ public class NonStaticOneTimePasswordAlgorithm implements OTPAlgorithm {
      * @throws java.security.InvalidKeyException      The secret provided was not a valid HMAC-SHA-1 key.
      */
     @Override
-    public byte[] hmac_sha1(byte[] keyBytes, byte[] text)
+    public byte[] hmacSha1(byte[] keyBytes, byte[] text)
             throws NoSuchAlgorithmException, InvalidKeyException {
         //        try {
         Mac hmacSha1;
@@ -128,7 +126,7 @@ public class NonStaticOneTimePasswordAlgorithm implements OTPAlgorithm {
         }
 
         // compute hmac hash
-        byte[] hash = hmac_sha1(secret, text);
+        byte[] hash = hmacSha1(secret, text);
 
         // put selected bytes into result int
         int offset = hash[hash.length - 1] & 0xf;
